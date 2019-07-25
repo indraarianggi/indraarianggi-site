@@ -1,1 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap");
+
+/**
+    FONT
+ */
+$font-primary: "Merriweather Sans", sans-serif;
+
+/**
+    COLOR
+ */
 $color-primary: #3ca370;
+$color-secondary: #ff5277;
+$color-tertiary: #828282;
+$color-tertiary-variant: #bdbdbd;
+$color-background: #fbfbfb;
+$color-text: #000000;
+
+/**
+    STYLE : BOX_SHADOW
+ */
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-reverse: 0 -2px 4px rgba(0, 0, 0, 0.1);

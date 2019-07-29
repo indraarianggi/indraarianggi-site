@@ -3,11 +3,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 /** Style */
-import "./Heading.module.scss"
+import headingStyles from "./Heading.module.scss"
 
 /** Component */
 const Heading = ({ value }) => {
-  return <h1>{value}</h1>
+  return <h1 className={headingStyles.heading}>{value}</h1>
 }
 
 Heading.propTypes = {

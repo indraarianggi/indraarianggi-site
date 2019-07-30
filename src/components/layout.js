@@ -1,6 +1,6 @@
 import React from "react"
 import Footer from "./footer"
-import Heading from "./Heading/Heading"
+import CardLogo from "./CardLogo/CardLogo"
 
 import "../styles/index.scss"
 import layoutStyles from "./layout.module.scss"
@@ -10,7 +10,7 @@ const Layout = props => {
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
         {props.children}
-        <Heading value="Indra Arianggi Suryaatmaja" />
+        <CardLogo />
       </div>
       <Footer />
     </div>

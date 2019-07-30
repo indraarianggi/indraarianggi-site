@@ -13,6 +13,6 @@ body {
   font-family: $font-primary;
   font-size: 16px;
   box-sizing: border-box;
-  color: var(--textColor);
-  background-color: var(--bgColor);
+  color: $color-text;
+  background-color: $color-background;
 }

@@ -1,0 +1,17 @@
+.card {
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 5rem;
+  height: 5rem;
+
+  & img {
+    width: 3.75rem;
+    height: 3.75rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

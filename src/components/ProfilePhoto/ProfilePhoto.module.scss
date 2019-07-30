@@ -1,0 +1,21 @@
+.photo {
+  & img {
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.photo_circle {
+  border-radius: 100%;
+  margin: 0 auto;
+  width: 6.25rem;
+  height: 6.25rem;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+  }
+}

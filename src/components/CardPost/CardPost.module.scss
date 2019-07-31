@@ -1,0 +1,27 @@
+.card_post {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.625rem; // 10px;
+  width: 100%;
+  min-height: 16.25rem; // 260px
+  box-sizing: border-box;
+
+  & .post_img {
+    height: 10rem;
+    overflow: hidden;
+  }
+
+  & .post_detail {
+    padding-top: 0.625rem;
+  }
+
+  & .post_tags {
+    margin-top: 0.625rem;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}

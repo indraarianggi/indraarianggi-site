@@ -1,0 +1,12 @@
+@import "../../styles/index.scss";
+
+.tag {
+  display: inline-block;
+  background-color: $color-tertiary-variant;
+  border-radius: 2em;
+  padding: 0 0.5em;
+
+  & p {
+    color: #fff;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/index.scss";
+
+.line {
+  border-bottom: 1px solid $color-tertiary-variant;
+
+  &.primary {
+    border-color: $color-primary;
+  }
+
+  &.bold {
+    border-width: 2px;
+  }
+}

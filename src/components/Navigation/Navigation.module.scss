@@ -1,0 +1,28 @@
+@import "../../styles/index.scss";
+
+.nav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 4rem;
+}
+
+.menu_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_item {
+  color: $color-tertiary-variant;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

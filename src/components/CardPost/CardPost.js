@@ -1,5 +1,6 @@
 /** Dependencies */
 import React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 /** Imported Components */
@@ -17,7 +18,7 @@ const CardPost = ({ imgPath, url, title, date, tags }) => {
 
   return (
     <div className={cardPostStyles.card_post}>
-      <a href={url}>
+      <Link to={url}>
         <div className={cardPostStyles.post_img}>
           <PostImage imgPath={imgPath} />
         </div>
@@ -28,7 +29,7 @@ const CardPost = ({ imgPath, url, title, date, tags }) => {
         {tagList.length > 0 ? (
           <div className={cardPostStyles.post_tags}>{tagList}</div>
         ) : null}
-      </a>
+      </Link>
     </div>
   )
 }

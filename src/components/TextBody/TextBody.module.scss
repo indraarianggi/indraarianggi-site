@@ -5,4 +5,8 @@
   font-size: 1rem; // 16px
   font-weight: 400;
   margin: 0;
+
+  & a {
+    color: $color-secondary;
+  }
 }

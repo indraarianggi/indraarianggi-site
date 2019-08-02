@@ -1,5 +1,6 @@
 /** Dependencies */
 import React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 /** Imported Components */
@@ -12,7 +13,9 @@ import tagStyles from "./Tag.module.scss"
 const Tag = ({ value }) => {
   return (
     <div className={tagStyles.tag}>
-      <TextOther value={`#${value}`} />
+      <Link to={`/tag/${value}`}>
+        <TextOther value={`#${value}`} />
+      </Link>
     </div>
   )
 }

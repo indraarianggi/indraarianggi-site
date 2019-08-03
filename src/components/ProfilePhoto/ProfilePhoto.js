@@ -8,7 +8,7 @@ import ppStyles from "./ProfilePhoto.module.scss"
 /** Component */
 const ProfilePhoto = ({ imgPath, alt, circle }) => {
   return (
-    <div className={circle ? ppStyles.photo_circle : ppStyles.photo}>
+    <div className={circle ? ppStyles.photoCircle : ppStyles.photo}>
       <img src={imgPath} alt={alt} />
     </div>
   )

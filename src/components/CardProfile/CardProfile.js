@@ -60,29 +60,29 @@ const CardProfile = () => {
   ]
 
   return (
-    <div className={cardProfileStyles.card_profile}>
+    <div className={cardProfileStyles.cardProfile}>
       <ProfilePhoto imgPath={photo} alt="Indra Arianggi" circle />
       <Subtitle
-        className={`${cardProfileStyles.center} ${cardProfileStyles.margin_top_xs}`}
-        value="Indra Arianggi"
+        className={`${cardProfileStyles.center} ${cardProfileStyles.marginTopXs}`}
+        text="Indra Arianggi"
       />
       <TextOther
-        className={`${cardProfileStyles.center} ${cardProfileStyles.margin_top_xxs}`}
-        value="Full Stack Web Developer"
+        className={`${cardProfileStyles.center} ${cardProfileStyles.marginTopXxs}`}
+        text="Full Stack Web Developer"
       />
-      <ul className={cardProfileStyles.social_list}>
+      <ul className={cardProfileStyles.socialList}>
         {socials.map(item => (
           <li key={item.name}>
             <ButtonIcon url={item.url} iconPath={item.icon} alt={item.name} />
           </li>
         ))}
       </ul>
-      <Line className={cardProfileStyles.margin_top_md} />
+      <Line className={cardProfileStyles.marginTopMd} />
       <div
-        className={`${cardProfileStyles.tags} ${cardProfileStyles.margin_top_md}`}
+        className={`${cardProfileStyles.tags} ${cardProfileStyles.marginTopMd}`}
       >
         {tags.map(tag => (
-          <Tag key={tag} value={tag} className={cardProfileStyles.tag_item} />
+          <Tag key={tag} text={tag} className={cardProfileStyles.tagItem} />
         ))}
       </div>
     </div>

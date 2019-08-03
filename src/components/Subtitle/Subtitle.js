@@ -6,12 +6,12 @@ import PropTypes from "prop-types"
 import subtitleStyles from "./Subtitle.module.scss"
 
 /** Component */
-const Subtitle = ({ value, className }) => {
-  return <h2 className={`${subtitleStyles.subtitle} ${className}`}>{value}</h2>
+const Subtitle = ({ text, className }) => {
+  return <h2 className={`${subtitleStyles.subtitle} ${className}`}>{text}</h2>
 }
 
 Subtitle.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   className: PropTypes.string,
 }
 

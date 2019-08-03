@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import buttonStyles from "./Button.module.scss"
 
 /** Component */
-const Button = ({ value, type, style, block, disabled }) => {
+const Button = ({ text, type, style, block, disabled }) => {
   return (
     <button
       disabled={disabled}
@@ -14,21 +14,21 @@ const Button = ({ value, type, style, block, disabled }) => {
         buttonStyles[type]
       } ${buttonStyles[style]}`}
     >
-      {value}
+      {text}
     </button>
   )
 }
 
 Button.propTypes = {
-  value: PropTypes.string,
-  type: PropTypes.string,
-  style: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(["", "primary", "secondary"]),
+  style: PropTypes.oneOf(["", "line"]),
   block: PropTypes.bool,
   disabled: PropTypes.bool,
 }
 
 Button.defaultProps = {
-  value: "",
+  text: "",
   type: "",
   style: "",
   block: false,

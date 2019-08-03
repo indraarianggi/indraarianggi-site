@@ -1,4 +1,4 @@
-.card_post {
+.card-post {
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;
@@ -9,19 +9,19 @@
   box-sizing: border-box;
   transition: box-shadow 300ms, transform 300ms;
 
-  & .post_img {
+  & .post-img {
     height: 10rem;
     overflow: hidden;
   }
 
-  & .post_detail {
+  & .post-detail {
     padding-top: 0.625rem;
   }
 
-  & .post_tags {
+  & .post-tags {
     margin-top: 1.25rem; // 20px
 
-    & .tag_item {
+    & .tag-item {
       margin: 0 0.625rem 0 0;
     }
   }
@@ -38,6 +38,6 @@
   }
 }
 
-.margin_top_xxs {
+.margin-top-xxs {
   margin-top: 0.3125rem; // 5px
 }

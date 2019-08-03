@@ -10,14 +10,14 @@ import navStyles from "./Navigation.module.scss"
 const Navigation = ({ menus }) => {
   return (
     <nav className={navStyles.nav}>
-      <ul className={navStyles.menu_list}>
+      <ul className={navStyles.menuList}>
         {menus.map(menu => (
           <li key={menu}>
             <Link
               key={menu}
               to={`/${menu}`}
-              className={navStyles.menu_item}
-              activeClassName={navStyles.menu_active}
+              className={navStyles.menuItem}
+              activeClassName={navStyles.menuActive}
             >
               {menu}
             </Link>
@@ -29,7 +29,7 @@ const Navigation = ({ menus }) => {
 }
 
 Navigation.propTypes = {
-  menus: PropTypes.array.isRequired,
+  menus: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Navigation

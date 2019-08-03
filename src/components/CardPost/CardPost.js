@@ -15,23 +15,23 @@ import cardPostStyles from "./CardPost.module.scss"
 /** Component */
 const CardPost = ({ imgPath, url, title, date, tags }) => {
   return (
-    <div className={cardPostStyles.card_post}>
+    <div className={cardPostStyles.cardPost}>
       <Link to={url}>
-        <div className={cardPostStyles.post_img}>
+        <div className={cardPostStyles.postImg}>
           <PostImage imgPath={imgPath} />
         </div>
-        <div className={cardPostStyles.post_detail}>
-          <Subtitle value={title} />
-          <TextOther value={date} className={cardPostStyles.margin_top_xxs} />
+        <div className={cardPostStyles.postDetail}>
+          <Subtitle text={title} />
+          <TextOther text={date} className={cardPostStyles.marginTopXxs} />
         </div>
         {tags.length > 0 ? (
-          <div className={cardPostStyles.post_tags}>
+          <div className={cardPostStyles.postTags}>
             {tags.map(tag => (
               <Tag
                 key={tag}
-                value={tag}
+                text={tag}
                 disabled
-                className={cardPostStyles.tag_item}
+                className={cardPostStyles.tagItem}
               />
             ))}
           </div>
@@ -46,7 +46,7 @@ CardPost.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  tags: PropTypes.array,
+  tags: PropTypes.arrayOf(PropTypes.string),
 }
 
 CardPost.defaultProps = {

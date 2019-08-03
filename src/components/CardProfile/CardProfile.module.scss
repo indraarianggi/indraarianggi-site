@@ -1,4 +1,4 @@
-.card_profile {
+.card-profile {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-.social_list {
+.social-list {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -23,18 +23,18 @@
   flex-wrap: wrap;
 }
 
-.tag_item {
+.tag-item {
   margin: 0 0.625rem 0.625rem 0;
 }
 
-.margin_top_md {
+.margin-top-md {
   margin-top: 1.875rem; // 30px
 }
 
-.margin_top_xs {
+.margin-top-xs {
   margin-top: 0.625rem; // 10px
 }
 
-.margin_top_xxs {
+.margin-top-xxs {
   margin-top: 0.3125rem; // 5px
 }

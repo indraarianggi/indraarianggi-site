@@ -6,12 +6,12 @@ import PropTypes from "prop-types"
 import textOtherStyles from "./TextOther.module.scss"
 
 /** Component */
-const TextOther = ({ value, className }) => {
-  return <p className={`${textOtherStyles.text_other} ${className}`}>{value}</p>
+const TextOther = ({ text, className }) => {
+  return <p className={`${textOtherStyles.textOther} ${className}`}>{text}</p>
 }
 
 TextOther.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   className: PropTypes.string,
 }
 

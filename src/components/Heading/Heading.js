@@ -6,12 +6,12 @@ import PropTypes from "prop-types"
 import headingStyles from "./Heading.module.scss"
 
 /** Component */
-const Heading = ({ value }) => {
-  return <h1 className={headingStyles.heading}>{value}</h1>
+const Heading = ({ text }) => {
+  return <h1 className={headingStyles.heading}>{text}</h1>
 }
 
 Heading.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 export default Heading

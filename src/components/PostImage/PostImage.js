@@ -7,7 +7,7 @@ import postImageStyles from "./PostImage.module.scss"
 
 /** Component */
 const PostImage = ({ imgPath, alt }) => {
-  return <img src={imgPath} alt={alt} className={postImageStyles.post_img} />
+  return <img src={imgPath} alt={alt} className={postImageStyles.postImg} />
 }
 
 PostImage.propTypes = {

@@ -8,7 +8,7 @@ import buttonIconStyles from "./ButtonIcon.module.scss"
 /** Component */
 const ButtonIcon = ({ url, iconPath, alt }) => {
   return (
-    <a href={url} className={buttonIconStyles.btn_icon}>
+    <a href={url} className={buttonIconStyles.btnIcon}>
       <img src={iconPath} alt={alt} />
     </a>
   )

@@ -7,7 +7,7 @@
   height: 4rem;
 }
 
-.menu_list {
+.menu-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-.menu_item {
+.menu-item {
   color: $color-tertiary-variant;
   text-decoration: none;
   text-transform: capitalize;
@@ -25,4 +25,8 @@
   &:hover {
     color: $color-primary;
   }
+}
+
+.menu-active {
+  color: $color-primary;
 }

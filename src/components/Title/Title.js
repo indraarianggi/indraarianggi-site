@@ -6,12 +6,12 @@ import PropTypes from "prop-types"
 import titleStyles from "./Title.module.scss"
 
 /** Component */
-const Title = ({ value }) => {
-  return <h1 className={titleStyles.title}>{value}</h1>
+const Title = ({ text }) => {
+  return <h1 className={titleStyles.title}>{text}</h1>
 }
 
 Title.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 export default Title

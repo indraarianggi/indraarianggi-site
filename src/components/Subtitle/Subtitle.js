@@ -6,12 +6,17 @@ import PropTypes from "prop-types"
 import subtitleStyles from "./Subtitle.module.scss"
 
 /** Component */
-const Subtitle = ({ value }) => {
-  return <h2 className={subtitleStyles.subtitle}>{value}</h2>
+const Subtitle = ({ value, className }) => {
+  return <h2 className={`${subtitleStyles.subtitle} ${className}`}>{value}</h2>
 }
 
 Subtitle.propTypes = {
   value: PropTypes.string.isRequired,
+  className: PropTypes.string,
+}
+
+Subtitle.defaultProps = {
+  className: "",
 }
 
 export default Subtitle

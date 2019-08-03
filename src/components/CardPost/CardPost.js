@@ -14,8 +14,6 @@ import cardPostStyles from "./CardPost.module.scss"
 
 /** Component */
 const CardPost = ({ imgPath, url, title, date, tags }) => {
-  const tagList = tags.map(tag => <Tag key={tag} value={tag} />)
-
   return (
     <div className={cardPostStyles.card_post}>
       <Link to={url}>
@@ -24,10 +22,19 @@ const CardPost = ({ imgPath, url, title, date, tags }) => {
         </div>
         <div className={cardPostStyles.post_detail}>
           <Subtitle value={title} />
-          <TextOther value={date} />
+          <TextOther value={date} className={cardPostStyles.margin_top_xxs} />
         </div>
-        {tagList.length > 0 ? (
-          <div className={cardPostStyles.post_tags}>{tagList}</div>
+        {tags.length > 0 ? (
+          <div className={cardPostStyles.post_tags}>
+            {tags.map(tag => (
+              <Tag
+                key={tag}
+                value={tag}
+                disabled
+                className={cardPostStyles.tag_item}
+              />
+            ))}
+          </div>
         ) : null}
       </Link>
     </div>

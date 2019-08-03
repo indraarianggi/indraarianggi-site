@@ -10,22 +10,28 @@ import TextOther from "../TextOther/TextOther"
 import tagStyles from "./Tag.module.scss"
 
 /** Component */
-const Tag = ({ value }) => {
-  return (
-    <div className={tagStyles.tag}>
-      <Link to={`/tag/${value}`}>
-        <TextOther value={`#${value}`} />
-      </Link>
-    </div>
+const Tag = ({ value, disabled, className }) => {
+  const tagElement = disabled ? (
+    <TextOther value={`#${value}`} />
+  ) : (
+    <Link to={`/tag/${value}`}>
+      <TextOther value={`#${value}`} />
+    </Link>
   )
+
+  return <div className={`${tagStyles.tag} ${className}`}>{tagElement}</div>
 }
 
 Tag.propTypes = {
   value: PropTypes.string,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 Tag.defaultProps = {
   value: "",
+  disabled: false,
+  className: "",
 }
 
 export default Tag

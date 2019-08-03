@@ -1,0 +1,13 @@
+@import "../../styles/index.scss";
+
+.footer {
+  color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

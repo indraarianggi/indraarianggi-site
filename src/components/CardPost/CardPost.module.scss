@@ -7,6 +7,7 @@
   width: 100%;
   min-height: 16.25rem; // 260px
   box-sizing: border-box;
+  transition: box-shadow 300ms, transform 300ms;
 
   & .post_img {
     height: 10rem;
@@ -18,10 +19,25 @@
   }
 
   & .post_tags {
-    margin-top: 0.625rem;
+    margin-top: 1.25rem; // 20px
+
+    & .tag_item {
+      margin: 0 0.625rem 0 0;
+    }
   }
 
   & a {
     text-decoration: none;
   }
+
+  &:hover {
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1);
+    -moz-transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+.margin_top_xxs {
+  margin-top: 0.3125rem; // 5px
 }

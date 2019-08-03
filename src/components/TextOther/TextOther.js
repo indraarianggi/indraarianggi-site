@@ -6,12 +6,17 @@ import PropTypes from "prop-types"
 import textOtherStyles from "./TextOther.module.scss"
 
 /** Component */
-const TextOther = ({ value }) => {
-  return <p className={textOtherStyles.text_other}>{value}</p>
+const TextOther = ({ value, className }) => {
+  return <p className={`${textOtherStyles.text_other} ${className}`}>{value}</p>
 }
 
 TextOther.propTypes = {
   value: PropTypes.string.isRequired,
+  className: PropTypes.string,
+}
+
+TextOther.defaultProps = {
+  className: "",
 }
 
 export default TextOther

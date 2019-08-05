@@ -1,0 +1,81 @@
+/**
+ *  Mobile
+ */
+.container {
+  // background-color: palevioletred;
+  // width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  // min-height: 100vh;
+}
+
+.aside,
+.main {
+  position: relative;
+  // width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.margin-top-md {
+  margin-top: 1.25rem; //20px
+}
+
+/**
+ *  Tablet
+ */
+@media (min-width: 768px) {
+  .container {
+    // background-color: yellow;
+    max-width: 720px;
+  }
+}
+
+/**
+ *  Laptop 1024px
+ */
+@media (min-width: 992px) {
+  .container {
+    // background-color: green;
+    max-width: 960px;
+    flex-direction: row;
+  }
+
+  .aside,
+  .main {
+    margin-top: 3.125rem; //50px
+  }
+
+  .aside {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .main {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+/**
+ *  Laptop > 1024px
+ */
+@media (min-width: 1200px) {
+  .container {
+    // background-color: red;
+    max-width: 1140px;
+  }
+}

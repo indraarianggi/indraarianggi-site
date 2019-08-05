@@ -1,10 +1,17 @@
+/** Dependencies */
 import React from "react"
+
+/** Imported Components */
+import Layout from "../components/Layout/Layout"
+import Title from "../components/Title/Title"
+import Line from "../components/Line/Line"
 
 const Blog = () => {
   return (
-    <div>
-      <h1>Blog Page</h1>
-    </div>
+    <Layout>
+      <Title text="Blog" />
+      <Line primary bold />
+    </Layout>
   )
 }
 

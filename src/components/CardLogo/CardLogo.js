@@ -6,9 +6,9 @@ import PropTypes from "prop-types"
 import cardLogoStyles from "./CardLogo.module.scss"
 
 /** Component */
-const CardLogo = ({ imgPath, alt }) => {
+const CardLogo = ({ imgPath, alt, className }) => {
   return (
-    <div className={cardLogoStyles.card}>
+    <div className={`${cardLogoStyles.card} ${className}`}>
       <img src={imgPath} alt={alt} />
     </div>
   )
@@ -17,10 +17,12 @@ const CardLogo = ({ imgPath, alt }) => {
 CardLogo.propTypes = {
   imgPath: PropTypes.string.isRequired,
   alt: PropTypes.string,
+  className: PropTypes.string,
 }
 
 CardLogo.defaultProps = {
   alt: "",
+  className: "",
 }
 
 export default CardLogo

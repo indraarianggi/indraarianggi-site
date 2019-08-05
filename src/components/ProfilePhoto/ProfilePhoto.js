@@ -5,24 +5,30 @@ import PropTypes from "prop-types"
 /** Style */
 import ppStyles from "./ProfilePhoto.module.scss"
 
+/** Assets */
+import photo from "../../images/indraarianggi.png"
+
 /** Component */
-const ProfilePhoto = ({ imgPath, alt, circle }) => {
+const ProfilePhoto = ({ circle, className }) => {
   return (
-    <div className={circle ? ppStyles.photoCircle : ppStyles.photo}>
-      <img src={imgPath} alt={alt} />
+    <div
+      className={`${
+        circle ? ppStyles.photoCircle : ppStyles.photo
+      } ${className}`}
+    >
+      <img src={photo} alt="Indra Arianggi" />
     </div>
   )
 }
 
 ProfilePhoto.propTypes = {
-  imgPath: PropTypes.string.isRequired,
-  alt: PropTypes.string,
   circle: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 ProfilePhoto.defaultProps = {
-  alt: "",
   circle: false,
+  className: "",
 }
 
 export default ProfilePhoto

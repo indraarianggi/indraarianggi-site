@@ -3,11 +3,24 @@
 .footer {
   color: $color-primary;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 0;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
 
   & a {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+/**
+ *  Tablet
+ */
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
   }
 }

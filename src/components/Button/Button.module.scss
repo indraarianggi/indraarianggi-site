@@ -32,7 +32,7 @@
 
     &.line {
       color: $color-primary;
-      background-color: #fff;
+      background-color: transparent;
       border-color: $color-primary;
       box-shadow: none;
 
@@ -59,7 +59,7 @@
 
     &.line {
       color: $color-secondary;
-      background-color: #fff;
+      background-color: transparent;
       border-color: $color-secondary;
       box-shadow: none;
 

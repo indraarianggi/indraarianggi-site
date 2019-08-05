@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <span>&copy; 2019 Indra Arianggi</span>
-      <Link to="/#">Credits</Link>
+      <Link to="/credits">Credits</Link>
     </footer>
   )
 }

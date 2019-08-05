@@ -6,8 +6,10 @@ import PropTypes from "prop-types"
 import textBodyStyles from "./TextBody.module.scss"
 
 /** Component */
-const TextBody = ({ children }) => {
-  return <div className={textBodyStyles.textBody}>{children}</div>
+const TextBody = ({ children, className }) => {
+  return (
+    <div className={`${textBodyStyles.textBody} ${className}`}>{children}</div>
+  )
 }
 
 TextBody.propTypes = {
@@ -17,6 +19,11 @@ TextBody.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]),
+  className: PropTypes.string,
+}
+
+TextBody.defaultProps = {
+  className: "",
 }
 
 export default TextBody

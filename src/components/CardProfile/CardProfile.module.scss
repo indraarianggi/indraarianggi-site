@@ -1,6 +1,7 @@
 .card-profile {
   width: 100%;
   background-color: #fff;
+  border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   padding: 1.875rem 1.25rem 1.25rem; // 30px 20px 20px
   box-sizing: border-box;
@@ -11,9 +12,6 @@
 }
 
 .social-list {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
   padding: 0 20%;
 }
 

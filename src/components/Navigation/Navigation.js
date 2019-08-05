@@ -12,14 +12,13 @@ const Navigation = ({ menus }) => {
     <nav className={navStyles.nav}>
       <ul className={navStyles.menuList}>
         {menus.map(menu => (
-          <li key={menu}>
+          <li key={menu.name}>
             <Link
-              key={menu}
-              to={`/${menu}`}
+              to={`${menu.url}`}
               className={navStyles.menuItem}
               activeClassName={navStyles.menuActive}
             >
-              {menu}
+              {menu.name}
             </Link>
           </li>
         ))}
@@ -29,7 +28,12 @@ const Navigation = ({ menus }) => {
 }
 
 Navigation.propTypes = {
-  menus: PropTypes.arrayOf(PropTypes.string).isRequired,
+  menus: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 export default Navigation

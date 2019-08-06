@@ -7,9 +7,9 @@ import PropTypes from "prop-types"
 import navStyles from "./Navigation.module.scss"
 
 /** Component */
-const Navigation = ({ menus }) => {
+const Navigation = ({ menus, className }) => {
   return (
-    <nav className={navStyles.nav}>
+    <nav className={`${navStyles.nav} ${className}`}>
       <ul className={navStyles.menuList}>
         {menus.map(menu => (
           <li key={menu.name}>
@@ -34,6 +34,11 @@ Navigation.propTypes = {
       url: PropTypes.string,
     })
   ).isRequired,
+  className: PropTypes.string,
+}
+
+Navigation.defaultProps = {
+  className: "",
 }
 
 export default Navigation

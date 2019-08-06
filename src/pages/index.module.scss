@@ -1,6 +1,5 @@
 .section,
 .section-intro {
-  padding: 15px 0;
   margin-bottom: 100px;
   overflow: auto;
 }
@@ -25,6 +24,10 @@
  *  Tablet
  */
 @media (min-width: 768px) {
+  .social-media {
+    width: 25%;
+    justify-content: space-between;
+  }
 }
 
 /**
@@ -43,11 +46,6 @@
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
-
-  .social-media {
-    width: 25%;
-    justify-content: space-between;
   }
 }
 

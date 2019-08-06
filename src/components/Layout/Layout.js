@@ -31,13 +31,15 @@ const Layout = ({ children, withPhoto }) => {
   const sidebar = withPhoto ? (
     <ProfilePhoto className={layoutStyles.marginTopMd} />
   ) : (
-    <CardProfile className={layoutStyles.marginTopMd} />
+    <CardProfile
+      className={`${layoutStyles.marginTopMd} ${layoutStyles.cardProfile}`}
+    />
   )
 
   return (
     <div className={layoutStyles.container}>
       <aside className={layoutStyles.aside}>
-        <Navigation menus={menus} />
+        <Navigation menus={menus} className={layoutStyles.nav} />
         {sidebar}
       </aside>
       <main className={layoutStyles.main}>{children}</main>

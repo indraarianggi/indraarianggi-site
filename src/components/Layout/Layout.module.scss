@@ -22,10 +22,29 @@
 .aside,
 .main {
   position: relative;
-  // width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   box-sizing: border-box;
+}
+
+.aside {
+  margin-top: 4rem; // 84px
+}
+
+.main {
+  margin-top: 0.9375rem; // 15px
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-radius: 0px;
+  box-shadow: 0 2px 4px 0 rgba(60, 163, 112, 0.1);
+}
+
+.card-profile {
+  display: none;
 }
 
 .margin-top-md {
@@ -54,6 +73,8 @@
 
   .aside,
   .main {
+    padding-right: 15px;
+    padding-left: 15px;
     margin-top: 3.125rem; //50px
   }
 
@@ -67,6 +88,17 @@
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
+  }
+
+  .nav {
+    position: unset;
+    z-index: unset;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .card-profile {
+    display: block;
   }
 }
 

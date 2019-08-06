@@ -1,7 +1,7 @@
 @import "../../styles/index.scss";
 
 .nav {
-  background-color: #fff;
+  background-color: $color-primary;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -29,5 +29,30 @@
 }
 
 .menu-active {
-  color: $color-primary;
+  color: #fff;
+}
+
+/**
+ *  Tablet
+ */
+@media (min-width: 768px) {
+}
+
+/**
+ *  Laptop 1024px
+ */
+@media (min-width: 992px) {
+  .nav {
+    background-color: #fff;
+  }
+
+  .menu-active {
+    color: $color-primary;
+  }
+}
+
+/**
+ *  Laptop > 1024px
+ */
+@media (min-width: 1200px) {
 }

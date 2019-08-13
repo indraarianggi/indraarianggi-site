@@ -1,13 +1,6 @@
-@import "variables";
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap");
 
-:root {
-  --primaryColor: $color-primary;
-  --secondaryColor: $color-secondary;
-  --tertiaryColor: $color-tertiary;
-  --tertiaryVariantColor: $color-tertiary-variant;
-  --bgColor: $color-background;
-  --textColor: $color-text;
-}
+@import "variables";
 
 body {
   font-family: $font-primary;

@@ -20,11 +20,10 @@ module.exports.onCreateNode = ({ node, actions, getNode }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const contentLayout = path.resolve(
-    "./src/components/ContentLayout/ContentLayout.js"
-  )
+  const postLayout = path.resolve("./src/components/PostLayout/PostLayout.js")
+  const blogPage = path.resolve("./src/components/BlogPage/BlogPage.js")
 
-  const res = await graphql(`
+  const results = await graphql(`
     query {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
@@ -45,10 +44,30 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMarkdownRemark.edges.forEach(post => {
+  // Creating blog list with pagination
+  const postsPerPage = 2
+  const numPages = Math.ceil(
+    results.data.allMarkdownRemark.edges.length / postsPerPage
+  )
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? "/blog" : `/blog/page/${i + 1}`,
+      component: blogPage,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        numPages,
+      },
+    })
+  })
+
+  // Creating blog posts
+  results.data.allMarkdownRemark.edges.forEach(post => {
     createPage({
       path: post.node.fields.slug,
-      component: contentLayout,
+      component: postLayout,
       context: {
         slug: post.node.fields.slug,
       },

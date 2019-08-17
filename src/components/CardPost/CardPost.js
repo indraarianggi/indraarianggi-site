@@ -13,9 +13,9 @@ import Tag from "../Tag/Tag"
 import cardPostStyles from "./CardPost.module.scss"
 
 /** Component */
-const CardPost = ({ imgPath, url, title, date, tags }) => {
+const CardPost = ({ imgPath, url, title, date, tags, className }) => {
   return (
-    <div className={cardPostStyles.cardPost}>
+    <div className={`${cardPostStyles.cardPost} ${className}`}>
       <Link to={url}>
         <div className={cardPostStyles.postImg}>
           <PostImage imgPath={imgPath} />
@@ -47,10 +47,12 @@ CardPost.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
 }
 
 CardPost.defaultProps = {
   tags: [],
+  className: "",
 }
 
 export default CardPost

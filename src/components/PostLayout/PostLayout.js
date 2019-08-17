@@ -11,9 +11,9 @@ import PostImage from "../PostImage/PostImage"
 import TextBody from "../TextBody/TextBody"
 
 /** Style */
-import contentLayoutStyle from "./ContentLayout.module.scss"
+import postLayoutStyle from "./PostLayout.module.scss"
 
-const ContentLayout = ({ data }) => {
+const PostLayout = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const imageSource = frontmatter.image.childImageSharp.fluid.src
 
@@ -22,21 +22,17 @@ const ContentLayout = ({ data }) => {
       <Title text={frontmatter.title} />
       <TextOther
         text={frontmatter.date}
-        className={contentLayoutStyle.marginTopXs}
+        className={postLayoutStyle.marginTopXs}
       />
-      <div className={contentLayoutStyle.marginTopXs}>
+      <div className={postLayoutStyle.marginTopXs}>
         {frontmatter.tags.map(tag => (
-          <Tag
-            key={tag}
-            text={tag}
-            className={contentLayoutStyle.marginRightXs}
-          />
+          <Tag key={tag} text={tag} className={postLayoutStyle.marginRightXs} />
         ))}
       </div>
       <PostImage
         imgPath={imageSource}
         alt={frontmatter.title}
-        className={contentLayoutStyle.marginTopMd}
+        className={postLayoutStyle.marginTopMd}
       />
       <TextBody>
         <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -45,7 +41,7 @@ const ContentLayout = ({ data }) => {
   )
 }
 
-export default ContentLayout
+export default PostLayout
 
 export const query = graphql`
   query($slug: String!) {

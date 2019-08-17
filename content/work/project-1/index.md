@@ -3,7 +3,7 @@ title: Project 1
 date: "2019-08-30"
 category: work
 tags: ["javascript", "react", "gatsby"]
-image: "./second-post.jpg"
+image: "./project-1.jpg"
 ---
 
 ## Why do we use it?

@@ -6,13 +6,13 @@ import PropTypes from "prop-types"
 /** Style */
 import paginationStyles from "./Pagination.module.scss"
 
-const Pagination = ({ numPages, currentPage, context }) => {
+const Pagination = ({ numPages, currentPage, context, className }) => {
   if (numPages <= 1) {
     return null
   }
 
   return (
-    <ul className={paginationStyles.pagination}>
+    <ul className={`${paginationStyles.pagination} ${className}`}>
       {Array.from({ length: numPages }).map((item, i) => {
         const index = i + 1
 
@@ -27,9 +27,11 @@ const Pagination = ({ numPages, currentPage, context }) => {
             }`}
           >
             {currentPage === index ? (
-              <span>{index}</span>
+              <span className={paginationStyles.paginationLink}>{index}</span>
             ) : (
-              <Link to={link}>{index}</Link>
+              <Link to={link} className={paginationStyles.paginationLink}>
+                {index}
+              </Link>
             )}
           </li>
         )

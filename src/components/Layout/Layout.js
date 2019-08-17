@@ -23,8 +23,8 @@ const Layout = ({ children, withPhoto }) => {
       url: "/blog",
     },
     {
-      name: "works",
-      url: "/works",
+      name: "work",
+      url: "/work",
     },
   ]
 
@@ -43,7 +43,7 @@ const Layout = ({ children, withPhoto }) => {
         {sidebar}
       </aside>
       <main className={layoutStyles.main}>{children}</main>
-      <Footer />
+      <Footer className={layoutStyles.footer} />
     </div>
   )
 }

@@ -22,6 +22,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const postLayout = path.resolve("./src/components/PostLayout/PostLayout.js")
   const blogPage = path.resolve("./src/components/BlogPage/BlogPage.js")
+  const workPage = path.resolve("./src/components/WorkPage/WorkPage.js")
 
   const results = await graphql(`
     query {
@@ -32,25 +33,30 @@ module.exports.createPages = async ({ graphql, actions }) => {
               slug
             }
             frontmatter {
-              title
               category
-              date
-              tags
             }
-            html
           }
         }
       }
     }
   `)
 
-  // Creating blog list with pagination
-  const postsPerPage = 2
-  const numPages = Math.ceil(
-    results.data.allMarkdownRemark.edges.length / postsPerPage
-  )
+  const blogPosts = results.data.allMarkdownRemark.edges.filter(post => {
+    return post.node.frontmatter.category === "blog"
+  })
 
-  Array.from({ length: numPages }).forEach((_, i) => {
+  const workPosts = results.data.allMarkdownRemark.edges.filter(post => {
+    return post.node.frontmatter.category === "work"
+  })
+
+  const postsPerPage = 2
+  const blogNumPages = Math.ceil(blogPosts.length / postsPerPage)
+  const workNumPages = Math.ceil(workPosts.length / postsPerPage)
+  console.log("page blog: ", blogNumPages)
+  console.log("page work: ", workNumPages)
+
+  // Creating blog list with pagination
+  Array.from({ length: blogNumPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? "/blog" : `/blog/page/${i + 1}`,
       component: blogPage,
@@ -58,7 +64,21 @@ module.exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         skip: i * postsPerPage,
         currentPage: i + 1,
-        numPages,
+        numPages: blogNumPages,
+      },
+    })
+  })
+
+  // Creating work list with pagination
+  Array.from({ length: workNumPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? "/work" : `/work/page/${i + 1}`,
+      component: workPage,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        numPages: workNumPages,
       },
     })
   })

@@ -10,9 +10,9 @@ import PostList from "../PostList/PostList"
 import Pagination from "../Pagination/Pagination"
 
 /** Style */
-import blogPageStyles from "./BlogPage.module.scss"
+import workPageStyles from "./WorkPage.module.scss"
 
-const BlogPage = ({ data, pageContext }) => {
+const WorkPage = ({ data, pageContext }) => {
   const { allMarkdownRemark } = data
   const { currentPage, numPages } = pageContext
 
@@ -34,26 +34,26 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Title text="Blog" />
+      <Title text="Work" />
       <Line primary bold />
-      <PostList posts={posts} className={blogPageStyles.marginTopMd} />
+      <PostList posts={posts} className={workPageStyles.marginTopMd} />
       <Pagination
         currentPage={currentPage}
         numPages={numPages}
-        context="blog"
-        className={blogPageStyles.pagination}
+        context="work"
+        className={workPageStyles.pagination}
       />
     </Layout>
   )
 }
 
-export default BlogPage
+export default WorkPage
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "blog" } } }
+      filter: { frontmatter: { category: { eq: "work" } } }
       limit: $limit
       skip: $skip
     ) {

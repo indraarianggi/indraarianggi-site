@@ -20,6 +20,16 @@
   margin-top: 3.125rem; // 50px
 }
 
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag-item {
+  margin: 0 0.625rem 0.625rem 0;
+}
+
 /**
  *  Tablet
  */

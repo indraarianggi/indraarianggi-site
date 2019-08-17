@@ -7,28 +7,28 @@ import ProfilePhoto from "../ProfilePhoto/ProfilePhoto"
 import Subtitle from "../Subtitle/Subtitle"
 import TextOther from "../TextOther/TextOther"
 import SocialMedia from "../SocialMedia/SocialMedia"
-import Line from "../Line/Line"
-import Tag from "../Tag/Tag"
+// import Line from "../Line/Line"
+// import Tag from "../Tag/Tag"
 
 /** Style */
 import cardProfileStyles from "./CardProfile.module.scss"
 
 /** Component */
 const CardProfile = ({ className }) => {
-  const tags = [
-    "lorem",
-    "ipsum",
-    "dolor",
-    "sit",
-    "amet",
-    "html5",
-    "css3",
-    "javascript",
-    "nodejs",
-    "expressjs",
-    "react",
-    "mongodb",
-  ]
+  // const tags = [
+  //   "lorem",
+  //   "ipsum",
+  //   "dolor",
+  //   "sit",
+  //   "amet",
+  //   "html5",
+  //   "css3",
+  //   "javascript",
+  //   "nodejs",
+  //   "expressjs",
+  //   "react",
+  //   "mongodb",
+  // ]
 
   return (
     <div className={`${cardProfileStyles.cardProfile} ${className}`}>
@@ -42,16 +42,17 @@ const CardProfile = ({ className }) => {
         text="Full Stack Web Developer"
       />
       <SocialMedia className={cardProfileStyles.socialList} />
-      <Line className={cardProfileStyles.marginTopMd} />
-      <div
-        className={`${cardProfileStyles.tags} ${cardProfileStyles.marginTopMd}`}
-      >
-        {tags.map(tag => (
-          <Tag key={tag} text={tag} className={cardProfileStyles.tagItem} />
-        ))}
-      </div>
     </div>
   )
+
+  // <Line className={cardProfileStyles.marginTopMd} />
+  //     <div
+  //       className={`${cardProfileStyles.tags} ${cardProfileStyles.marginTopMd}`}
+  //     >
+  //       {tags.map(tag => (
+  //         <Tag key={tag} text={tag} className={cardProfileStyles.tagItem} />
+  //       ))}
+  //     </div>
 }
 
 CardProfile.propTypes = {

@@ -29,7 +29,9 @@ const Footer = ({ className }) => {
         &copy; {data.site.siteMetadata.site.last_edit}{" "}
         {data.site.siteMetadata.author.name}
       </span>
-      <Link to="/credits">Credits</Link>
+      <div>
+        <Link to="/tags">All Tag</Link> | <Link to="/credits">Credits</Link>
+      </div>
     </footer>
   )
 }

@@ -1,5 +1,6 @@
 const { createFilePath } = require("gatsby-source-filesystem")
 const path = require("path")
+const _ = require("lodash")
 
 // Create slug for each content (blog post)
 module.exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -23,6 +24,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const postLayout = path.resolve("./src/components/PostLayout/PostLayout.js")
   const blogPage = path.resolve("./src/components/BlogPage/BlogPage.js")
   const workPage = path.resolve("./src/components/WorkPage/WorkPage.js")
+  const tagPage = path.resolve("./src/components/TagPage/TagPage.js")
 
   const results = await graphql(`
     query {
@@ -34,6 +36,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               category
+              tags
             }
           }
         }
@@ -52,8 +55,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = 2
   const blogNumPages = Math.ceil(blogPosts.length / postsPerPage)
   const workNumPages = Math.ceil(workPosts.length / postsPerPage)
-  console.log("page blog: ", blogNumPages)
-  console.log("page work: ", workNumPages)
 
   // Creating blog list with pagination
   Array.from({ length: blogNumPages }).forEach((_, i) => {
@@ -83,8 +84,31 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // All tags
+  let allTags = []
+  // Iterate through each post, putting all found tags into `allTags array`
+  _.each(results.data.allMarkdownRemark.edges, edge => {
+    if (_.get(edge, "node.frontmatter.tags")) {
+      allTags = allTags.concat(edge.node.frontmatter.tags)
+    }
+  })
+
+  // Eleminate duplicate tags
+  allTags = _.uniq(allTags)
+
+  // Create post list based on a tag
+  allTags.forEach((tag, i) => {
+    createPage({
+      path: `/tag/${_.kebabCase(tag)}`,
+      component: tagPage,
+      context: {
+        tag,
+      },
+    })
+  })
+
   // Creating blog posts
-  results.data.allMarkdownRemark.edges.forEach(post => {
+  results.data.allMarkdownRemark.edges.forEach((post, i) => {
     createPage({
       path: post.node.fields.slug,
       component: postLayout,

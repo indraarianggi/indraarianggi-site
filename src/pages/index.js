@@ -29,7 +29,7 @@ import expMaentrus from "../images/maentrus.png"
 import expLabti from "../images/labti.jpeg"
 
 /** Style */
-import pageStyles from "./index.module.scss"
+import pageStyles from "./page.module.scss"
 
 const Home = () => {
   const techs = [

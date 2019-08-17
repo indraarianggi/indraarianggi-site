@@ -2,7 +2,7 @@
 title: Third Blog Post
 date: "2019-09-12"
 category: blog
-tags: ["javascript", "react", "gatsby"]
+tags: ["javascript", "react", "mongodb"]
 image: "./third-post.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: Project 1
 date: "2019-08-30"
 category: work
-tags: ["javascript", "react", "gatsby"]
+tags: ["ui", "ux", "react", "gatsby"]
 image: "./project-1.jpg"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Project 1
+description: First work by Indra Arianggi
 date: "2019-08-30"
 category: work
 tags: ["ui", "ux", "react", "gatsby"]

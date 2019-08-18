@@ -12,12 +12,10 @@ const Footer = ({ className }) => {
     query {
       site {
         siteMetadata {
-          site {
-            last_edit
-          }
           author {
             name
           }
+          last_edit
         }
       }
     }
@@ -26,7 +24,7 @@ const Footer = ({ className }) => {
   return (
     <footer className={`${footerStyles.footer} ${className}`}>
       <span>
-        &copy; {data.site.siteMetadata.site.last_edit}{" "}
+        &copy; {data.site.siteMetadata.last_edit}{" "}
         {data.site.siteMetadata.author.name}
       </span>
       <div>

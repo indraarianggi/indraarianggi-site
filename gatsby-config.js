@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    site: {
-      title: "Indra' Blog",
-      icon: "",
-      description: "",
-      last_edit: "2019",
-    },
+    title: "Indra Arianggi",
+    description:
+      "Personal site by Indra Arianggi S. Contains a profile, work portfolio, and several blog articles about technology, work and hobbies",
+    url: "https://www.indraarianggi.com",
+    image: "./src/images/indraarianggi.png",
     author: {
       name: "Indra Arianggi S",
       avatar: "indraarianggi.png",
@@ -17,6 +16,7 @@ module.exports = {
       behance: "",
       instagram: "",
     },
+    last_edit: "2019",
   },
   plugins: [
     "gatsby-plugin-sass",

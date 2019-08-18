@@ -3,6 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 /** Imported Components */
+import SEO from "../SEO/SEO"
 import Navigation from "../Navigation/Navigation"
 import ProfilePhoto from "../ProfilePhoto/ProfilePhoto"
 import CardProfile from "../CardProfile/CardProfile"
@@ -12,7 +13,7 @@ import Footer from "../Footer/Footer"
 import "../../styles/index.scss"
 import layoutStyles from "./Layout.module.scss"
 
-const Layout = ({ children, withPhoto }) => {
+const Layout = ({ children, seo, withPhoto }) => {
   const menus = [
     {
       name: "home",
@@ -38,6 +39,7 @@ const Layout = ({ children, withPhoto }) => {
 
   return (
     <div className={layoutStyles.container}>
+      <SEO {...seo} />
       <aside className={layoutStyles.aside}>
         <Navigation menus={menus} className={layoutStyles.nav} />
         {sidebar}

@@ -1,6 +1,6 @@
 ---
 title: Another Blog Post
-descriptions: This post is my second blog post
+description: This post is my second blog post
 date: "2019-08-30"
 category: blog
 tags: ["javascript", "react", "gatsby"]

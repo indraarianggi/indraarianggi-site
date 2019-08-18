@@ -1,5 +1,6 @@
 ---
 title: Third Blog Post
+description: Third post by Indra Arianggi
 date: "2019-09-12"
 category: blog
 tags: ["javascript", "react", "mongodb"]

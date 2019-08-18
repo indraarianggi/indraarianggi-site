@@ -13,12 +13,21 @@ import TextBody from "../TextBody/TextBody"
 /** Style */
 import postLayoutStyle from "./PostLayout.module.scss"
 
-const PostLayout = ({ data }) => {
+const PostLayout = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
   const imageSource = frontmatter.image.childImageSharp.fluid.src
 
+  // For seo metadata
+  const seo = {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    pathname: `${location.pathname}`,
+    image: `${imageSource}`,
+    article: true,
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <Title text={frontmatter.title} />
       <TextOther
         text={frontmatter.date}
@@ -49,6 +58,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         tags
         image {

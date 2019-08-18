@@ -1,5 +1,6 @@
 ---
 title: Fourth Blog Post
+description: Fourth post by Indra Arianggi
 date: "2019-09-14"
 category: blog
 tags: ["javascript", "react", "gatsby"]

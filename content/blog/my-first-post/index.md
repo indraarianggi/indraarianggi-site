@@ -1,6 +1,6 @@
 ---
 title: My First Blog Post
-descriptions: This post is related to the gatsbyjs
+description: This post is related to the gatsbyjs
 date: "2019-07-21"
 category: blog
 tags: ["javascript", "react", "gatsby"]

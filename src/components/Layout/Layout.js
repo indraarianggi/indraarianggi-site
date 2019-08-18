@@ -14,21 +14,6 @@ import "../../styles/index.scss"
 import layoutStyles from "./Layout.module.scss"
 
 const Layout = ({ children, seo, withPhoto }) => {
-  const menus = [
-    {
-      name: "home",
-      url: "/",
-    },
-    {
-      name: "blog",
-      url: "/blog",
-    },
-    {
-      name: "work",
-      url: "/work",
-    },
-  ]
-
   const sidebar = withPhoto ? (
     <ProfilePhoto className={layoutStyles.marginTopMd} />
   ) : (
@@ -41,7 +26,7 @@ const Layout = ({ children, seo, withPhoto }) => {
     <div className={layoutStyles.container}>
       <SEO {...seo} />
       <aside className={layoutStyles.aside}>
-        <Navigation menus={menus} className={layoutStyles.nav} />
+        <Navigation className={layoutStyles.nav} />
         {sidebar}
       </aside>
       <main className={layoutStyles.main}>{children}</main>

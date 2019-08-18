@@ -1,0 +1,8 @@
+- name: "Indorelawan"
+  image: './indorelawan.png'
+
+- name: "Maentrus Digital Lab"
+  image: './maentrus.png'
+
+- name: "LabTI Universitas Gunadarma"
+  image: './labti.jpeg'

@@ -52,7 +52,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     return post.node.frontmatter.category === "work"
   })
 
-  const postsPerPage = 2
+  const postsPerPage = 6
   const blogNumPages = Math.ceil(blogPosts.length / postsPerPage)
   const workNumPages = Math.ceil(workPosts.length / postsPerPage)
 

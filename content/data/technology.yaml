@@ -1,0 +1,41 @@
+- name: "HTML5"
+  image: './html5.png'
+
+- name: "CSS3"
+  image: './css3.png'
+
+- name: "JavaScript"
+  image: './javascript.png'
+
+- name: "NodeJs"
+  image: './nodejs.png'
+
+- name: "ExpressJs"
+  image: './express.png'
+
+- name: "React"
+  image: './react.png'
+
+- name: "Gatsby"
+  image: './gatsby.png'
+
+- name: "MongoDb"
+  image: './mongodb.png'
+
+- name: "PHP"
+  image: './php.png'
+
+- name: "CodeIgniter"
+  image: './codeigniter.png'
+
+- name: "MySql"
+  image: './mysql.png'
+
+- name: "Adobe Illustrator"
+  image: './ai.png'
+
+- name: "Adobe Xd"
+  image: './xd.png'
+
+- name: "Figma"
+  image: './figma.png'

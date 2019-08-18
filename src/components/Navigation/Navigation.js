@@ -1,39 +1,51 @@
 /** Dependencies */
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
 /** Style */
 import navStyles from "./Navigation.module.scss"
 
 /** Component */
-const Navigation = ({ menus, className }) => {
+const Navigation = ({ className }) => {
+  // Querying data menus from yaml file
+  const data = useStaticQuery(graphql`
+    query {
+      allMainMenuYaml {
+        edges {
+          node {
+            label
+            link
+          }
+        }
+      }
+    }
+  `)
+
+  const menuItems = data.allMainMenuYaml.edges.map(edge => {
+    const { label, link } = edge.node
+
+    return (
+      <li key={label}>
+        <Link
+          to={`${link}`}
+          className={navStyles.menuItem}
+          activeClassName={navStyles.menuActive}
+        >
+          {label}
+        </Link>
+      </li>
+    )
+  })
+
   return (
     <nav className={`${navStyles.nav} ${className}`}>
-      <ul className={navStyles.menuList}>
-        {menus.map(menu => (
-          <li key={menu.name}>
-            <Link
-              to={`${menu.url}`}
-              className={navStyles.menuItem}
-              activeClassName={navStyles.menuActive}
-            >
-              {menu.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ul className={navStyles.menuList}>{menuItems}</ul>
     </nav>
   )
 }
 
 Navigation.propTypes = {
-  menus: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      url: PropTypes.string,
-    })
-  ).isRequired,
   className: PropTypes.string,
 }
 

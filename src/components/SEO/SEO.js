@@ -8,6 +8,9 @@ import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
+/** Assets */
+import siteIcon from "../../images/favicon.png"
+
 const SEO = ({ title, description, pathname, image, article }) => {
   // Querying data from siteMetadata
   const data = useStaticQuery(graphql`
@@ -17,19 +20,15 @@ const SEO = ({ title, description, pathname, image, article }) => {
           defaultTitle: title
           defaultDescription: description
           siteUrl: url
-          defaultImage: image
         }
       }
     }
   `)
 
   // Extract results data
-  const {
-    defaultTitle,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = data.site.siteMetadata
+  const { defaultTitle, defaultDescription, siteUrl } = data.site.siteMetadata
+
+  const defaultImage = siteIcon
 
   const seo = {
     title: title || defaultTitle,
@@ -40,6 +39,8 @@ const SEO = ({ title, description, pathname, image, article }) => {
 
   return (
     <Helmet title={seo.title}>
+      <link rel="icon" type="image/png" href={defaultImage} />
+
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

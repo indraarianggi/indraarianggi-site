@@ -28,9 +28,9 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  text: "",
-  color: "",
-  type: "",
+  text: null,
+  color: null,
+  type: null,
   block: false,
   disabled: false,
 }

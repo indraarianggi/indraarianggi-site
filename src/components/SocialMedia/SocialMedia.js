@@ -50,7 +50,7 @@ SocialMedia.propTypes = {
 }
 
 SocialMedia.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default SocialMedia

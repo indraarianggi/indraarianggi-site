@@ -16,7 +16,7 @@ TextOther.propTypes = {
 }
 
 TextOther.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default TextOther

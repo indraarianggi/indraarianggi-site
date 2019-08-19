@@ -29,9 +29,9 @@ Tag.propTypes = {
 }
 
 Tag.defaultProps = {
-  text: "",
+  text: null,
   disabled: false,
-  className: "",
+  className: null,
 }
 
 export default Tag

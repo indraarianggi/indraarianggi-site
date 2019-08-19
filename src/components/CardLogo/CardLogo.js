@@ -21,8 +21,8 @@ CardLogo.propTypes = {
 }
 
 CardLogo.defaultProps = {
-  alt: "",
-  className: "",
+  alt: null,
+  className: null,
 }
 
 export default CardLogo

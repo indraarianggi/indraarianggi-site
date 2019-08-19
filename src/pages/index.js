@@ -7,7 +7,6 @@ import Layout from "../components/Layout/Layout"
 import TextBody from "../components/TextBody/TextBody"
 import Heading from "../components/Heading/Heading"
 import Title from "../components/Title/Title"
-import Button from "../components/Button/Button"
 import SocialMedia from "../components/SocialMedia/SocialMedia"
 import CardLogo from "../components/CardLogo/CardLogo"
 
@@ -54,9 +53,6 @@ const Home = ({ data }) => {
               it recently.
             </p>
           </TextBody>
-          <div className={pageStyles.marginTopLg}>
-            <Button text="Get In Touch" color="primary" />
-          </div>
           <SocialMedia
             className={`${pageStyles.socialMedia} ${pageStyles.marginTopLg}`}
           />

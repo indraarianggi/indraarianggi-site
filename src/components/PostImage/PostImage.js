@@ -23,8 +23,8 @@ PostImage.propTypes = {
 }
 
 PostImage.defaultProps = {
-  alt: "",
-  className: "",
+  alt: null,
+  className: null,
 }
 
 export default PostImage

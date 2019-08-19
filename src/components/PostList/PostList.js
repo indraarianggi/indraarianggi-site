@@ -37,7 +37,7 @@ PostList.propTypes = {
 }
 
 PostList.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default PostList

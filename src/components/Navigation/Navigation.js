@@ -50,7 +50,7 @@ Navigation.propTypes = {
 }
 
 Navigation.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default Navigation

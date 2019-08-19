@@ -33,12 +33,6 @@
 }
 
 /**
- *  Tablet
- */
-@media (min-width: 768px) {
-}
-
-/**
  *  Laptop 1024px
  */
 @media (min-width: 992px) {
@@ -49,10 +43,4 @@
   .menu-active {
     color: $color-primary;
   }
-}
-
-/**
- *  Laptop > 1024px
- */
-@media (min-width: 1200px) {
 }

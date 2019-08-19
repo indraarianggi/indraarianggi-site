@@ -26,7 +26,7 @@ ButtonIcon.propTypes = {
 }
 
 ButtonIcon.defaultProps = {
-  alt: "",
+  alt: null,
 }
 
 export default ButtonIcon

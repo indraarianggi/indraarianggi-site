@@ -16,7 +16,7 @@ Subtitle.propTypes = {
 }
 
 Subtitle.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default Subtitle

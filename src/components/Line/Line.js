@@ -25,7 +25,7 @@ Line.propTypes = {
 Line.defaultProps = {
   primary: false,
   bold: false,
-  className: "",
+  className: null,
 }
 
 export default Line

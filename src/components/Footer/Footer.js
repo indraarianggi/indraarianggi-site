@@ -38,7 +38,7 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default Footer

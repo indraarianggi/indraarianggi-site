@@ -45,7 +45,7 @@ ProfilePhoto.propTypes = {
 
 ProfilePhoto.defaultProps = {
   circle: false,
-  className: "",
+  className: null,
 }
 
 export default ProfilePhoto

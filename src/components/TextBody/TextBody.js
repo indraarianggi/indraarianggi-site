@@ -23,7 +23,7 @@ TextBody.propTypes = {
 }
 
 TextBody.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default TextBody

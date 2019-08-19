@@ -68,7 +68,7 @@ CardProfile.propTypes = {
 }
 
 CardProfile.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default CardProfile

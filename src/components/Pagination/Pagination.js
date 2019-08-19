@@ -48,7 +48,7 @@ Pagination.propTypes = {
 }
 
 Pagination.defaultProps = {
-  className: "",
+  className: null,
 }
 
 export default Pagination

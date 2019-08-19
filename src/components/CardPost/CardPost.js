@@ -52,7 +52,7 @@ CardPost.propTypes = {
 
 CardPost.defaultProps = {
   tags: [],
-  className: "",
+  className: null,
 }
 
 export default CardPost

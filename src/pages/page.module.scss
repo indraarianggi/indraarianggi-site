@@ -8,16 +8,15 @@
   padding: 0;
 }
 
-.card-logo {
-  margin: 0 1.25rem 1.25rem 0;
+.post-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.margin-top-md {
-  margin-top: 1.25rem; // 20px
-}
-
-.margin-top-lg {
-  margin-top: 3.125rem; // 50px
+.card-item {
+  padding: 0 0.3125rem; // 5px
+  box-sizing: border-box;
 }
 
 .tags {
@@ -30,6 +29,18 @@
   margin: 0 0.625rem 0.625rem 0;
 }
 
+.margin-top-md {
+  margin-top: 1.25rem; // 20px
+}
+
+.margin-bottom-md {
+  margin-bottom: 1.25rem; // 20px
+}
+
+.margin-top-lg {
+  margin-top: 3.125rem; // 50px
+}
+
 /**
  *  Tablet
  */
@@ -37,6 +48,11 @@
   .social-media {
     width: 25%;
     justify-content: space-between;
+  }
+
+  .card-item {
+    padding: 0 0.625rem; // 10px
+    box-sizing: border-box;
   }
 }
 

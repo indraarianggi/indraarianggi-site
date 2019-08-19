@@ -1,49 +1,44 @@
 /** Dependencies */
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
 /** Imported Components */
 import ButtonIcon from "../ButtonIcon/ButtonIcon"
-
-/** Assets */
-import iconLinkedin from "../../images/linkedin.svg"
-import iconGithub from "../../images/github.svg"
-import iconBehance from "../../images/behance.svg"
-import iconInstagram from "../../images/instagram.svg"
 
 /** Style */
 import socmedStyles from "./SocialMedia.module.scss"
 
 /** Component */
 const SocialMedia = ({ className }) => {
-  const socials = [
-    {
-      name: "LinkedIn",
-      icon: iconLinkedin,
-      url: "https://www.linkedin.com/in/indraarianggi/",
-    },
-    {
-      name: "GitHub",
-      icon: iconGithub,
-      url: "https://github.com/indraarianggi",
-    },
-    {
-      name: "Behance",
-      icon: iconBehance,
-      url: "https://www.behance.net/indraarianggi",
-    },
-    {
-      name: "Instagram",
-      icon: iconInstagram,
-      url: "https://www.instagram.com/indraarianggi_/",
-    },
-  ]
+  // get data from yaml file
+  const data = useStaticQuery(graphql`
+    query {
+      authorYaml {
+        account {
+          label
+          link
+          image {
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <ul className={`${socmedStyles.socmedList} ${className}`}>
-      {socials.map(item => (
-        <li key={item.name}>
-          <ButtonIcon url={item.url} iconPath={item.icon} alt={item.name} />
+      {data.authorYaml.account.map(acc => (
+        <li key={acc.label}>
+          <ButtonIcon
+            url={acc.link}
+            iconPath={acc.image.childImageSharp.fixed.src}
+            alt={acc.label}
+          />
         </li>
       ))}
     </ul>

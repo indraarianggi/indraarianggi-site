@@ -7,16 +7,16 @@ import PropTypes from "prop-types"
 import footerStyles from "./Footer.module.scss"
 
 const Footer = ({ className }) => {
-  // get data from site metadata
+  // get data from site metadata and yaml file
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          author {
-            name
-          }
           last_edit
         }
+      }
+      authorYaml {
+        name
       }
     }
   `)
@@ -24,8 +24,7 @@ const Footer = ({ className }) => {
   return (
     <footer className={`${footerStyles.footer} ${className}`}>
       <span>
-        &copy; {data.site.siteMetadata.last_edit}{" "}
-        {data.site.siteMetadata.author.name}
+        &copy; {data.site.siteMetadata.last_edit} {data.authorYaml.name}
       </span>
       <div>
         <Link to="/tags">All Tag</Link> | <Link to="/credits">Credits</Link>

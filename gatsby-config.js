@@ -5,17 +5,6 @@ module.exports = {
       "Personal site by Indra Arianggi S. Contains a profile, work portfolio, and several blog articles about technology, work and hobbies",
     url: "https://www.indraarianggi.com",
     image: "./src/images/indraarianggi.png",
-    author: {
-      name: "Indra Arianggi S",
-      avatar: "indraarianggi.png",
-      email: "indraarianggi@gmail.com",
-    },
-    link: {
-      linkedin: "",
-      github: "",
-      behance: "",
-      instagram: "",
-    },
     last_edit: "2019",
   },
   plugins: [
@@ -25,6 +14,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/`,
         name: "content",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images/`,
+        name: "images",
       },
     },
     {

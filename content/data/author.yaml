@@ -1,0 +1,20 @@
+- name: "Indra Arianggi S"
+  avatar: "../../src/images/indraarianggi.png"
+  email: "indraarianggi@gmail.com"
+  job: "Full Stack Web Developer"
+  account:
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/indraarianggi/"
+    image: '../../src/images/linkedin.png'
+
+  - label: "GitHub"
+    link: "https://github.com/indraarianggi"
+    image: "../../src/images/github.png"
+
+  - label: "Behance"
+    link: "https://www.behance.net/indraarianggi"
+    image: "../../src/images/behance.png"
+
+  - label: "Instagram"
+    link: "https://www.instagram.com/indraarianggi_/"
+    image: "../../src/images/instagram.png"

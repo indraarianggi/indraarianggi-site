@@ -1,22 +1,39 @@
 /** Dependencies */
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
 /** Style */
 import ppStyles from "./ProfilePhoto.module.scss"
 
-/** Assets */
-import photo from "../../images/indraarianggi.png"
-
 /** Component */
 const ProfilePhoto = ({ circle, className }) => {
+  // get data from yaml file
+  const data = useStaticQuery(graphql`
+    query {
+      authorYaml {
+        name
+        avatar {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div
       className={`${
         circle ? ppStyles.photoCircle : ppStyles.photo
       } ${className}`}
     >
-      <img src={photo} alt="Indra Arianggi" />
+      <img
+        src={data.authorYaml.avatar.childImageSharp.fixed.src}
+        alt={data.authorYaml.name}
+      />
     </div>
   )
 }

@@ -19,12 +19,12 @@ const Home = ({ data }) => {
     const { name, image } = edge.node
 
     return (
-      <CardLogo
+      <div
         key={name}
-        imgPath={image.childImageSharp.fluid.src}
-        alt={name}
-        className={pageStyles.cardLogo}
-      />
+        className={`${pageStyles.cardItem} ${pageStyles.marginBottomMd}`}
+      >
+        <CardLogo imgPath={image.childImageSharp.fluid.src} alt={name} />
+      </div>
     )
   })
 
@@ -32,12 +32,12 @@ const Home = ({ data }) => {
     const { name, image } = edge.node
 
     return (
-      <CardLogo
+      <div
         key={name}
-        imgPath={image.childImageSharp.fluid.src}
-        alt={name}
-        className={pageStyles.cardLogo}
-      />
+        className={`${pageStyles.cardItem} ${pageStyles.marginBottomMd}`}
+      >
+        <CardLogo imgPath={image.childImageSharp.fluid.src} alt={name} />
+      </div>
     )
   })
 
@@ -67,14 +67,14 @@ const Home = ({ data }) => {
         <TextBody>
           <p>Here are a few technologies I have been working with.</p>
         </TextBody>
-        <div>{technologies}</div>
+        <div className={pageStyles.postList}>{technologies}</div>
       </div>
       <div className={pageStyles.section}>
         <Title text="Experience" />
         <TextBody>
           <p>Where I have worked? Here is the list.</p>
         </TextBody>
-        <div>{experiences}</div>
+        <div className={pageStyles.postList}>{experiences}</div>
       </div>
     </Layout>
   )

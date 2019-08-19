@@ -1,41 +1,41 @@
 - name: "HTML5"
-  image: './html5.png'
+  image: '../../src/images/html5.png'
 
 - name: "CSS3"
-  image: './css3.png'
+  image: '../../src/images/css3.png'
 
 - name: "JavaScript"
-  image: './javascript.png'
+  image: '../../src/images/javascript.png'
 
 - name: "NodeJs"
-  image: './nodejs.png'
+  image: '../../src/images/nodejs.png'
 
 - name: "ExpressJs"
-  image: './express.png'
+  image: '../../src/images/express.png'
 
 - name: "React"
-  image: './react.png'
+  image: '../../src/images/react.png'
 
 - name: "Gatsby"
-  image: './gatsby.png'
+  image: '../../src/images/gatsby.png'
 
 - name: "MongoDb"
-  image: './mongodb.png'
+  image: '../../src/images/mongodb.png'
 
 - name: "PHP"
-  image: './php.png'
+  image: '../../src/images/php.png'
 
 - name: "CodeIgniter"
-  image: './codeigniter.png'
+  image: '../../src/images/codeigniter.png'
 
 - name: "MySql"
-  image: './mysql.png'
+  image: '../../src/images/mysql.png'
 
 - name: "Adobe Illustrator"
-  image: './ai.png'
+  image: '../../src/images/ai.png'
 
 - name: "Adobe Xd"
-  image: './xd.png'
+  image: '../../src/images/xd.png'
 
 - name: "Figma"
-  image: './figma.png'
+  image: '../../src/images/figma.png'

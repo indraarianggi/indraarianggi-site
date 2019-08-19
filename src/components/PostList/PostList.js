@@ -6,15 +6,15 @@ import PropTypes from "prop-types"
 import CardPost from "../CardPost/CardPost"
 
 /** Style */
-import postListStyle from "./PostList.module.scss"
+import postListStyles from "./PostList.module.scss"
 
 const PostList = ({ posts, className }) => {
   return (
-    <div className={`${postListStyle.postList} ${className}`}>
+    <div className={`${postListStyles.postList} ${className}`}>
       {posts.map(post => (
         <div
           key={post.title}
-          className={`${postListStyle.postItem} ${postListStyle.marginBottomMd}`}
+          className={`${postListStyles.postItem} ${postListStyles.marginBottomMd}`}
         >
           <CardPost {...post} />
         </div>

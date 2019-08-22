@@ -19,7 +19,8 @@ const PostLayout = ({ data, location }) => {
 
   // For seo metadata
   const seo = {
-    title: frontmatter.title,
+    title: `${frontmatter.category.charAt(0).toUpperCase() +
+      frontmatter.category.slice(1)} - ${frontmatter.title}`,
     description: frontmatter.description,
     pathname: `${location.pathname}`,
     image: `${imageSource}`,
@@ -60,6 +61,7 @@ export const query = graphql`
         title
         description
         date(formatString: "MMMM DD, YYYY")
+        category
         tags
         image {
           childImageSharp {

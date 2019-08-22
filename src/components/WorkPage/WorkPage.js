@@ -32,8 +32,12 @@ const WorkPage = ({ data, pageContext }) => {
     return true // just to avoid warning -> because .map expected a return value
   })
 
+  const seo = {
+    title: "Work",
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <Title text="Work" />
       <Line primary bold />
       <PostList posts={posts} className={workPageStyles.marginTopMd} />

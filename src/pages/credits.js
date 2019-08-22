@@ -8,8 +8,12 @@ import Line from "../components/Line/Line"
 import TextBody from "../components/TextBody/TextBody"
 
 const Credit = () => {
+  const seo = {
+    title: "Credits",
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <Title text="Credits" />
       <Line primary bold />
       <TextBody>

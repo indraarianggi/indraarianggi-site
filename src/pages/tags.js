@@ -20,8 +20,12 @@ const Tags = ({ data }) => {
     return true // just to avoid warning -> because .map expected a return value
   })
 
+  const seo = {
+    title: "All Tag",
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <Title text="All Tag" />
       <Line primary bold />
       <div className={`${tagsStyles.tags} ${tagsStyles.marginTopMd}`}>

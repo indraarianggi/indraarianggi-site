@@ -29,6 +29,10 @@
   margin: 0 0.625rem 0.625rem 0;
 }
 
+.not-found {
+  text-align: center;
+}
+
 .margin-top-md {
   margin-top: 1.25rem; // 20px
 }
@@ -72,6 +76,10 @@
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+
+  .not-found {
+    text-align: unset;
   }
 }
 

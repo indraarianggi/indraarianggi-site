@@ -31,8 +31,12 @@ const TagPage = ({ data, pageContext }) => {
     return true // just to avoid warning -> because .map expected a return value
   })
 
+  const seo = {
+    title: `Tag: ${tag}`,
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <Title text={`Tag: ${tag}`} />
       <Line primary bold />
       <PostList posts={posts} className={tagPageStyles.marginTopMd} />

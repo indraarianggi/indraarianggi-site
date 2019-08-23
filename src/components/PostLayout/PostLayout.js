@@ -9,6 +9,7 @@ import TextOther from "../TextOther/TextOther"
 import Tag from "../Tag/Tag"
 import PostImage from "../PostImage/PostImage"
 import TextBody from "../TextBody/TextBody"
+import { DiscussionEmbed } from "disqus-react"
 
 /** Style */
 import postLayoutStyle from "./PostLayout.module.scss"
@@ -25,6 +26,12 @@ const PostLayout = ({ data, location }) => {
     pathname: `${location.pathname}`,
     image: `${imageSource}`,
     article: true,
+  }
+
+  // Disqus Configuration
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: frontmatter.title },
   }
 
   return (
@@ -47,6 +54,9 @@ const PostLayout = ({ data, location }) => {
       <TextBody>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </TextBody>
+      <div className={postLayoutStyle.marginTopLg}>
+        <DiscussionEmbed {...disqusConfig} />
+      </div>
     </Layout>
   )
 }

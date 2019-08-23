@@ -41,6 +41,8 @@ const SEO = ({ title, description, pathname, image, article }) => {
     <Helmet title={seo.title}>
       <link rel="icon" type="image/png" href={defaultImage} />
 
+      <meta name="theme-color" content="#3ca370" />
+
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

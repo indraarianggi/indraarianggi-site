@@ -7,7 +7,7 @@ import subtitleStyles from "./Subtitle.module.scss"
 
 /** Component */
 const Subtitle = ({ text, className }) => {
-  return <h2 className={`${subtitleStyles.subtitle} ${className}`}>{text}</h2>
+  return <h3 className={`${subtitleStyles.subtitle} ${className}`}>{text}</h3>
 }
 
 Subtitle.propTypes = {

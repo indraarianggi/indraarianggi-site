@@ -31,7 +31,7 @@ const PostLayout = ({ data, location }) => {
   // Disqus Configuration
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: frontmatter.title },
+    config: { identifier: location.pathname },
   }
 
   return (

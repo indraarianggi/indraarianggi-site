@@ -1,0 +1,101 @@
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 57x57
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-57x57.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 114x114
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-114x114.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 72x72
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-72x72.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 144x144
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-144x144.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 60x60
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-60x60.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 120x120
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-120x120.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 76x76
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-76x76.png"
+
+- tag: link
+  rel: apple-touch-icon-precomposed
+  sizes: 152x152
+  type: null
+  href: "../../src/images/favicon/apple-touch-icon-152x152.png"
+
+- tag: link
+  rel: icon
+  sizes: 196x196
+  type: img/png
+  href: "../../src/images/favicon/favicon-196x196.png"
+
+- tag: link
+  rel: icon
+  sizes: 32x32
+  type: image/png
+  href: "../../src/images/favicon/favicon-32x32.png"
+
+- tag: link
+  rel: icon
+  sizes: 16x16
+  type: image/png
+  href: "../../src/images/favicon/favicon-16x16.png"
+
+- tag: link
+  rel: icon
+  sizes: 128x128
+  type: image/png
+  href: "../../src/images/favicon/favicon-128.png"
+
+- tag: meta
+  rel: msapplication-TileImage
+  sizes: null
+  type: null
+  href: "../../src/images/favicon/mstile-144x144.png"
+
+- tag: meta
+  rel: msapplication-square70x70logo
+  sizes: null
+  type: null
+  href: "../../src/images/favicon/mstile-70x70.png"
+
+- tag: meta
+  rel: msapplication-square150x150logo
+  sizes: null
+  type: null
+  href: "../../src/images/favicon/mstile-150x150.png"
+
+- tag: meta
+  rel: msapplication-wide310x150logo
+  sizes: null
+  type: null
+  href: "../../src/images/favicon/mstile-310x150.png"
+
+- tag: meta
+  rel: msapplication-square310x310logo
+  sizes: null
+  type: null
+  href: "../../src/images/favicon/mstile-310x310.png"

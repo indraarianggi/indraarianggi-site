@@ -22,10 +22,27 @@ const SEO = ({ title, description, pathname, image, article }) => {
           siteUrl: url
         }
       }
+      allFaviconYaml {
+        edges {
+          node {
+            tag
+            rel
+            sizes
+            type
+            href {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
-  // Extract results data
+  // Extract siteMetadata results
   const { defaultTitle, defaultDescription, siteUrl } = data.site.siteMetadata
 
   const defaultImage = siteIcon
@@ -38,22 +55,55 @@ const SEO = ({ title, description, pathname, image, article }) => {
   }
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet htmlAttributes={{ lang: "en" }}>
+      {/* <!-- Primary Meta Tags --> */}
+      <title>{seo.title}</title>
+      <meta name="title" content={seo.title} />
+      <meta name="description" content={seo.description} />
+      <meta name="theme-color" content="#3ca370" />
+      <meta name="image" content={seo.image} />
       <link rel="icon" type="image/png" href={defaultImage} />
 
-      <meta name="theme-color" content="#3ca370" />
+      {/* <!-- Icons --> */}
+      {
+        data.allFaviconYaml.edges.map(edge => {
+          const { tag, rel, sizes, type, href } = edge.node
+          const image = href.childImageSharp.fluid.src
+          
+          if (tag === "link") {
+            if (type) {
+              return (
+                <link key={rel} rel={rel} type={type} sizes={sizes} href={image} />
+              )
+            } else {
+              return (
+                <link key={rel} rel={rel} sizes={sizes} href={image} />
+              )
+            }
+          } else {
+            return (
+              <meta key={rel} name={rel} content={image} />
+            )
+          }
+        })
+      }
 
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-
+      {/* <!-- Open Graph / Facebook --> */}
+      {article ? (
+        <meta property="og:type" content="article" />
+      ) : (
+        <meta property="og:type" content="website" />
+      )}
       {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
+
+      {/* <!-- Twitter --> */}
       <meta name="twitter:card" content="summary_large_image" />
+      {seo.url && <meta property="twitter:url" content={seo.url} />}
       {seo.title && <meta name="twitter:title" content={seo.title} />}
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />

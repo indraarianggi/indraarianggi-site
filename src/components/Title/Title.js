@@ -7,7 +7,7 @@ import titleStyles from "./Title.module.scss"
 
 /** Component */
 const Title = ({ text }) => {
-  return <h1 className={titleStyles.title}>{text}</h1>
+  return <h2 className={titleStyles.title}>{text}</h2>
 }
 
 Title.propTypes = {
